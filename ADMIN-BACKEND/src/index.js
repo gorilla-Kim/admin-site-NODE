@@ -1,16 +1,20 @@
 // main Server Source 
 
+// 환경변수를 불러옵니다.
 require('dotenv').config();
+const { 
+  PORT: port,
+  MONGO_URI: mongoUri 
+} = process.env;
 
 const Koa = require('koa');
 const Router = require('koa-router');
 
 const api = require('./api');
+const db = require('./db');
 
+db.connect();
 const app = new Koa();
-
-// 환경변수를 불러옵니다.
-const { PORT: port } = process.env;
 
 const router = new Router();
 /* /... */
