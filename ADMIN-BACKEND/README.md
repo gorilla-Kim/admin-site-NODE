@@ -15,3 +15,22 @@ nodemon 설치
 라우터 설정
 `yarn add koa-router`
 
+### Routes 관리
+ /src/index.js
+ * `/...`
+ * `/api/...`
+
+ /src/api/index.js
+ * `/api/...`
+ * `/api/v1.0`
+
+ /src/api/v1.0/index.js
+ * `/api/v1.0/...`
+ * `/api/v1.0/auth`
+ * `/api/v1.0/maintain` --> 아직 미설정
+ + /src/api/v1.0/auth/index.js
+    * `/api/v1.0/auth/...`
+    * `/api/v1.0/auth/`
+ + /src/api/v1.0/maintain/index.js
+    * `/api/v1.0/maintain/...` --> 아직 미설정
+    * `/api/v1.0/maintain/` --> 아직 미설정
