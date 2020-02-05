@@ -1,5 +1,5 @@
 const Router = require('koa-router'); 
-const auth = require('./auth').default;
+const auth = require('./auth');
 
 const api = new Router();
 
